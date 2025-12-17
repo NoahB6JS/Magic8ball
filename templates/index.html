@@ -3,12 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <title>8BallReality</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename= 'style.css') }}">
-
-
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-   <h1>Welcome to the 8 Ball</h1>
+<h1>Welcome to the 8 Ball</h1>
+
+<button onclick="getQuote()">Ask me?</button>
+<p id="quote"></p>
+
+<script>
+function getQuote() {
+  fetch("/quote")
+    .then(res => res.text())
+    .then(text => {
+      document.getElementById("quote").innerText = text;
+    });
+}
+</script>
+
 </body>
 </html>
-
