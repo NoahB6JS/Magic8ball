@@ -8,8 +8,13 @@
 <body>
 <h1>Welcome to the 8 Ball</h1>
 
-<button onclick="getQuote()">Ask me?</button>
-<p id="quote"></p>
+<div id="ball">
+  <img src="/static/eightball.png" id="ball-img">
+  <div id="quote"></div>
+</div>
+
+<button onclick="getQuote()">Shake</button>
+
 
 <script>
 function getQuote() {
