@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <title>8BallReality</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
 <body>
-<h1>Welcome to the 8 Ball</h1>
+<h1>The Magic 8</h1>
+<p>Ask the ball a question......</p>
 
 <div id="ball">
   <img src="/static/eightball.png" id="ball-img">
@@ -25,6 +27,11 @@ function getQuote() {
     });
 }
 </script>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+
+
 
 </body>
 </html>
